@@ -12,7 +12,33 @@
       crossorigin
     ></script>
   </head>
+
   <body>
-    <h1>Add React to Website</h1>
+    <script>
+      // ----------- BÀI 1: TẠO REACT.CREATELEMENT() -----------
+      // Cách 1: tạo bằng DOM
+      const h1DOM = document.createElement("h1");
+
+      h1DOM.title = "Hello";
+      h1DOM.classname = "heading";
+
+      h1DOM.innerText = "Hello guys!";
+
+      document.body.appendChild(h1DOM);
+
+      // ------------------------------------------
+      // Cách 2: tạo bằng React
+      const h1React = React.createElement(
+        "h1",
+        {
+          title: "Hello",
+          classname: "heading",
+        },
+        "Hello guys!"
+      );
+
+      console.log(h1React);
+      console.log(h1DOM);
+    </script>
   </body>
 </html>
