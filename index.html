@@ -11,11 +11,16 @@
       src="https://unpkg.com/react@17/umd/react.development.js"
       crossorigin
     ></script>
+
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
   </head>
 
   <body>
-    <script>
-      // ----------- BÀI 1: TẠO REACT.CREATELEMENT() -----------
+    <!-- ----------- BÀI 1: TẠO REACT.CREATELEMENT() ----------- -->
+    <!-- <script>
       // Cách 1: tạo bằng DOM
       const h1DOM = document.createElement("h1");
 
@@ -36,9 +41,36 @@
         },
         "Hello guys!"
       );
+    </script> -->
 
-      console.log(h1React);
-      console.log(h1DOM);
-    </script>
+    <!-- ------------------------------------------ -->
+    <!-- ----------- BÀI 2: TẠO REACT.DOM ----------- -->
+    <!-- <div id="root"></div>
+    <script>
+      // React
+      const postItem = React.createElement(
+        "div",
+        {
+          className: "post-item",
+        },
+        React.createElement(
+          "h2",
+          {
+            title: "Học React",
+          },
+          "Học ReactJS"
+        ),
+        React.createElement("p", {}, "Học React từ cơ bản")
+      );
+
+      // Get root element
+      const root = document.getElementById("root");
+
+      // React-DOM -> render UI
+      ReactDOM.render(postItem, root);
+    </script> -->
+
+    <!-- ------------------------------------------ -->
+    <!-- ----------- BÀI 3: TẠO REACT.DOM ----------- -->
   </body>
 </html>
