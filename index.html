@@ -89,5 +89,68 @@
 
     <!-- ------------------------------------------ -->
     <!-- ----------- BÀI 4: TẠO JSX render Arrays ----------- -->
+    <!-- <div id="root"></div>
+    <script type="text/babel">
+      const courses = [
+        {
+          name: "HTML, CSS",
+        },
+        {
+          name: "Responsive",
+        },
+        {
+          name: "ReactJS",
+        },
+      ];
+
+      const jsx = (
+        <ul>
+          {courses.map((course, index) => (
+            <li key={index}>{course.name}</li>
+          ))}
+        </ul>
+      );
+
+      ReactDOM.render(jsx, document.getElementById("root"));
+    </script> -->
+
+    <!-- Truyền nhiều thẻ cùng lúc -->
+    <!-- <div id="root"></div>
+    <script type="text/babel">
+      const jSx = (
+        <React.Fragment>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+        </React.Fragment>
+      );
+
+      ReactDOM.render(jSx, document.getElementById("root"));
+    </script> -->
+
+    <!-- ------------------------------------------ -->
+    <!-- ----------- BÀI 5: React element types ----------- -->
+    <div id="app"></div>
+    <script type="text/babel">
+      function Header() {
+        return <div className="header">Header</div>;
+      }
+
+      class Content extends React.Component {
+        render() {
+          return <div className="content">Content</div>;
+        }
+      }
+      const app = (
+        <div className="wrapper">
+          <Header />
+          <Content />
+          <div className="footer">Footer</div>
+        </div>
+      );
+      ReactDOM.render(app, document.getElementById("app"));
+    </script>
+
+    <!-- ------------------------------------------ -->
+    <!-- ----------- BÀI 5: React element types ----------- -->
   </body>
 </html>
