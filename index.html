@@ -129,7 +129,7 @@
 
     <!-- ------------------------------------------ -->
     <!-- ----------- BÀI 5: React element types ----------- -->
-    <div id="app"></div>
+    <!-- <div id="app"></div>
     <script type="text/babel">
       function Header() {
         return <div className="header">Header</div>;
@@ -148,9 +148,38 @@
         </div>
       );
       ReactDOM.render(app, document.getElementById("app"));
-    </script>
+    </script> -->
 
     <!-- ------------------------------------------ -->
-    <!-- ----------- BÀI 5: React element types ----------- -->
+    <!-- ----------- BÀI 6: DOM events ----------- -->
+    <div id="root"></div>
+    <script type="text/babel">
+      const CourseItem = (props) => (
+        <div>
+          <h2>{props.title}</h2>
+          <img src={props.image} />
+          <p>{props.description}</p>
+          <p>{props.studentsCount}</p>
+        </div>
+      );
+
+      function App() {
+        return (
+          <div className="wrapper">
+            {courses.map((course) => (
+              <CourseItem
+                key={course.id}
+                title={course.title}
+                image={course.thumbnail_cdn}
+                description={course.description}
+                studentsCount={course.students_count}
+              />
+            ))}
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("app"));
+    </script>
   </body>
 </html>
